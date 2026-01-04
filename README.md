@@ -20,4 +20,5 @@ Campus Collective is a student marketplace platform that allows campus users to 
 Developed as a team academic project for Computer Science / Information Systems at Rhodes University.
 
 ## Screenshots
-(Add screenshots here)
+coming soon
+
