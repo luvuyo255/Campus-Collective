@@ -1,0 +1,52 @@
+<!doctype html> 
+<html> 
+  <head> 
+    <meta charset="utf-8"> 
+    <title>Create Account | Campus Collective</title>
+    <link rel = "stylesheet" href="styles.css">
+    <script src="YakuzaJS.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </head>
+   
+  <body class="body"> 
+    <div class="register">
+      <h3>Create Account</h3>
+      <form id="registerForm" action="createA.php" method="post">
+        <input type="text" name="firstname" placeholder="First Name" required></input>
+        <input type="text" name = "surname" placeholder="Surname" required></input>
+        <input type="email" name="email" placeholder="Email Address (eg: Jocelynflores@gmail.com)" required></input>
+        <input type="tel" name="cellphone" id="cellphone"
+        pattern="^\+?[0-9]{10,15}$" 
+        inputmode="numeric"
+        placeholder="Cellphone Number (eg: +27734710897)" required></input>
+       <!--Pattern allows for optional + at the begiining, followed by 10 to 15 digits/numbers-->
+       <div class = "disclaimer"><p><strong>WARNING:</strong></p><ul> Ensure that threats cannot find answers to these questions.</ul>
+      <ul>Ensure that your  close friends and family cannot use this against you.</ul></div>
+       <select class = "security_question" id="security_question" name="security_question" required>
+        <option value="" selected>Select a security question below</option>
+        <option value="What is the name of your first pet?">What is the name of your first pet?</option>
+        <option value="What city were you born?">What city were you born?</option>
+        <option value="What was the nickname only your family called you as a child?">What was the nickname only your family called you as a child?</option>
+       </select>
+       <input type="text" name = "security_answer" placeholder="Answer the security question selected above" required></input>
+        
+        <input type="password" id="password" name="password" placeholder="Password" required></input>
+        <div id="PwdStren"></div><!-- Used for password strength message -->
+        <input type="password" name="confirm_password" id = "confirm_password" placeholder="Confirm Password" required></input>
+        <div id = "confpwd"></div>
+        <button type="submit">Sign Up</button>
+        <h3><a href="login.php">Already have an account? Log In</a></h3>
+      </form>
+
+      <p>By creating an account, you agree to our <a href="disclaimer.html"> Terms & Conditions </a>.</p>
+    </div>
+    <script>
+  // Initialize password strength and confirmation validation
+  document.addEventListener("DOMContentLoaded", function() {
+    if (typeof passwordTime === "function") passwordTime(); // these are in YakuzaJS file
+    if (typeof passwordConfirm === "function") passwordConfirm();
+  });
+</script>
+  </body>
+</html>
+

@@ -1,0 +1,175 @@
+<!doctype html> 
+<html> 
+<head> 
+    <meta charset="utf-8"> 
+    <link rel="stylesheet" href="shop_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="YakuzaJS.js"></script>
+    <title>Campus Collective - Shop</title>
+</head> 
+<body>
+      <div class="header">
+        <div class="top">
+          <h1 class="message">Campus Collective</h1>
+          <div class="icons">
+            <a href="dashboard.php"><i class="fa fa-user"></i></a>
+            <a href="cart.html"><i class="fa fa-shopping-cart"></i></a>
+          </div>
+        </div>
+        <div class="nav">
+          <div class="logo">
+            <img src="PICTURES/LOGO FINAL.png" alt="logo">
+          </div>
+          <div class="navs">
+            <a href="home.php">Home</a>
+            <a href="buy_maz.php">Shop</a>
+            <a href="sell.php">Sell</a>
+            <a href="reunite.html">Reunite</a>
+            <a href="About.html">About Us</a>
+            <a href="Contact.html">Contact Us</a>
+            <a href="login.php">Login</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="search">
+        <input type="text" placeholder="Search for products..." />
+        <button><i class="fa fa-search"></i></button>
+      </div>
+   
+<!-- Catalog Container -->
+<div class="catalog">
+
+    <div class="filters">
+        <button class="filter-btn">All</button>
+        <button class="filter-btn">Books</button>
+        <button class="filter-btn">Electronics</button>
+        <button class="filter-btn">Clothing</button>
+        <button class="filter-btn">Tutors</button>
+    </div>
+    
+
+    <div class="random_products">
+        <div class="item-card">
+            <img src="PICTURES/maths_textbook.jpg" alt="Used Textbook - Math" class="item-pic">
+            <h3>Used Textbook - Math</h3>
+            <p>The Student Lecturer</p>
+            <p>R200</p>
+            <button onclick="addToCart('Used Textbook - Math', 200, 'PICTURES/maths_textbook.jpg', 'The Student Lecturer')">Add To Cart</button>
+
+        </div>
+        <div class="item-card">
+            <img src="PICTURES/dell_laptop.jpg" alt="Laptop - Dell XPS" class="item-pic">
+            <h3>Laptop - Dell XPS</h3>
+            <p>Campus Electronics</p>
+            <p>R8000</p>
+           <button class="filter-btn" onclick="addToCart('Laptop - Dell XPS', 8000, 'PICTURES/dell_laptop.jpg', 'Campus Electronics')">Add To Cart</button>
+
+        </div>
+        <div class="item-card">
+            <img src="PICTURES/bicylce.jpg" alt="Bicycle" class="item-pic">
+            <h3>Bicycle</h3>
+            <p>CRS</p>
+            <p>R1500</p>
+            <button class="filter-btn" onclick="addToCart('Bicycle', 1500, 'PICTURES/bicylce.jpg', 'CRS')">Add To Cart</button>
+        </div>
+        <div class="item-card">
+            <img src="PICTURES/jacket.jpg" alt="Jacket - Winter" class="item-pic">
+            <h3>Jacket - Winter</h3>
+            <p>Rhodes Apparel</p>
+            <p>R400</p>
+            <button class="filter-btn" onclick="addToCart('Jacket - Winter', 400, 'PICTURES/jacket.jpg', 'Rhodes Apparel')">Add To Cart</button>
+        </div>
+        <div class="item-card">
+            <img src="PICTURES/tutor1.png" alt="Jacket - Winter" class="item-pic">
+            <h3>Psychology 202 Tutor</h3>
+            <p>PsycheGuide</p>
+            <p>R100/hr</p>
+           <button class="filter-btn" onclick="addToCart('Psychology 202 Tutor', 100, 'PICTURES/tutor1.png', 'PsycheGuide')">Add To Cart</button>
+        </div>
+        <div class="item-card">
+            <img src="PICTURES/taxi.png" alt="Jacket - Winter" class="item-pic">
+            <h3>Makhanda Taxi</h3>
+            <p>GoDrive</p>
+            <p>R150/trip</p>
+            <button class="filter-btn" onclick="addToCart('Makhanda Taxi', 150, 'PICTURES/taxi.png', 'GoDrive')">Add To Cart</button>
+        </div>
+        <div class="item-card">
+            <img src="PICTURES/PS5.jpg" alt="Jacket - Winter" class="item-pic">
+            <h3>Playstation 5 Console</h3>
+            <p>Rhodes Electronics</p>
+            <p>R12,871</p>
+            <button class="filter-btn" onclick="addToCart('Playstation 5 Console', 12,871, 'PICTURES/PsycheGuide.png', 'Rhodes Electronics')">Add To Cart</button>
+        </div>
+        <div class="item-card">
+            <img src="PICTURES/XboxController.jpg" alt="Jacket - Winter" class="item-pic">
+            <h3>Xbox Series Controller</h3>
+            <p>Rhodes Electronics</p>
+            <p>R1,348</p>
+            <button class="filter-btn" onclick="addToCart('Xbox Series Controller', 1,348, 'PICTURES/XboxController.jpg', 'Rhodes Electronics')">Add To Cart</button>
+        </div>
+        <div class="item-card">
+            <img src="PICTURES/SonyHP.jpg" alt="Jacket - Winter" class="item-pic">
+            <h3>Sony Foldable Headphones -MDR-ZX110-White</h3>
+            <p>Rhodes Electronics</p>
+            <p>R999,99</p>
+            <button class="filter-btn" onclick="addToCart('Sony Foldable Headphones -MDR-ZX110-White<', 999.99, 'PICTURES/SonyHP.jpg', 'Rhodes Electronics')">Add To Cart</button>
+        </div>
+         <div class="item-card">
+            <img src="PICTURES/Airpods.jpg" alt="Jacket - Winter" class="item-pic">
+            <h3>Apple Airpods Pro with MagSafe Case</h3>
+            <p>Rhodes Electronics</p>
+            <p>R2,799</p>
+            <button class="filter-btn" onclick="addToCart('Apple Airpods Pro with MagSafe Case<', 2,799, 'PICTURES/Airpods.jpg', 'Rhodes Electronics')">Add To Cart</button>
+        </div>
+        <div class="item-card">
+            <img src="PICTURES/Mouse.jpg" alt="Jacket - Winter" class="item-pic">
+            <h3>Logitech M185 Wireless Mouse</h3>
+            <p>Rhodes Electronics</p>
+            <p>R1,799</p>
+            <button class="filter-btn" onclick="addToCart('Logitech M185 Wireless Mouse<', 1,799, 'PICTURES/Mouse.jpg', 'Rhodes Electronics')">Add To Cart</button>
+        </div>
+        <div class="item-card">
+            <img src="PICTURES/AtomicHabits.jpg" alt="Jacket - Winter" class="item-pic">
+            <h3>Atomic Habits</h3>
+            <p>Angelo Goliath</p>
+            <p>R335</p>
+            <button class="filter-btn" onclick="addToCart('Atomic Habits<', 335, 'PICTURES/AtomicHabits.jpg', 'Rhodes Electronics')">Add To Cart</button>
+        </div>
+         <div class="item-card">
+            <img src="PICTURES/USBC.jpg" alt="Jacket - Winter" class="item-pic">
+            <h3>USB-C</h3>
+            <p>Rhodes Electronics</p>
+            <p>R259</p>
+            <button class="filter-btn" onclick="addToCart('USB-C<', 259, 'PICTURES/USBC.jpg', 'Rhodes Electronics')">Add To Cart</button>
+        </div>
+        <div class="item-card">
+            <img src="PICTURES/RDR2.jpg" alt="Jacket - Winter" class="item-pic">
+            <h3>Red Dead Redemption II Standard Edition(Xbox one)</h3>
+            <p>Lucas Mahuwa</p>
+            <p>R547</p>
+            <button class="filter-btn" onclick="addToCart('Red Dead Redemption II Standardd Edition(Xbox one)<', 547, 'PICTURES/RDR2.jpg', 'Rhodes Electronics')">Add To Cart</button>
+        </div>
+        <div class="item-card">
+            <img src="PICTURES/LostSoul.png" alt="Jacket - Winter" class="item-pic">
+            <h3>Lost Soul Aside</h3>
+            <p>Lucas Mahuwa</p>
+            <p>R1099</p>
+            <button class="filter-btn" onclick="addToCart('Lost Soul Aside<', 1099, 'PICTURES/LostSoul.png', 'Rhodes Electronics')">Add To Cart</button>
+        </div>
+    </div>
+</div>
+
+
+ <footer>
+      <p>&copy; 2025 Campus Collective | Connecting Students Everywhere</p>
+      <p>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="mailto:contact@campuscollective.com"><i class="fa fa-envelope"></i></a>
+      </p>
+    </footer>
+  
+ 
+</body>
+</html>

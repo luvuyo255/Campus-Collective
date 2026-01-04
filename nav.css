@@ -1,0 +1,48 @@
+nav {
+    margin: 0;
+    padding: 0;
+    background-color: #333;  /* Dark background for the nav */
+}
+
+nav ul {
+    list-style-type: none;     /* Removes default bullet points */
+    margin: 0;                 /* Removes default margin */
+    padding: 0;                /* Removes default padding */
+    display: flex;             /* Use Flexbox to display items in a row */
+    justify-content: space-around; /* Distribute space evenly */
+}
+
+nav li {
+    padding: 10px 20px;        /* Padding around each list item */
+}
+
+a {
+    text-decoration: none;     /* Removes the underline from links */
+    color: white;              /* Sets the link color to white */
+    font-size: 16px;           /* Sets a font size for the links */
+    display: block;            /* Makes the whole area around the link clickable */
+    padding: 10px 15px;        /* Padding inside the link */
+}
+body{
+    background-color:white;
+}
+.contact{
+    text-align: center;
+}
+.search {
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    padding: 30px 0px;
+               
+}
+
+.search input {
+      width: 100px; 
+      height: 30px; 
+      border-radius: 10px;
+}
+
+form{
+    border: 2px;
+}

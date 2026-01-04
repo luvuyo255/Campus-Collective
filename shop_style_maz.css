@@ -1,0 +1,323 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+
+.promo-pic {
+  display: flex;
+   
+}
+
+.promo-pic img {
+  width: 100%;
+  height: 700px;
+   
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: whitesmoke;
+    margin: 0;
+    color: #333;
+}
+
+/* Header */
+.head {
+    background: linear-gradient(135deg, #6b8ff3, #3f5de8, #8a5dfc);
+    padding-bottom: 60px;
+    border-radius: 0 0 0px 0px;
+}
+
+
+
+.header {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+    margin: 20px;
+    border-radius: 30px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #6b8ff3, #3f5de8, #8a5dfc);
+}
+
+.top {
+    display: flex;
+}
+
+.top .icons {
+    display: flex;
+    gap: 15px;
+    margin-left: auto;
+    font-size: 30px;
+    color: #fff;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    left: 20px;
+}
+
+.logo img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.navs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 19px;
+    justify-content: center;
+}
+
+.navs a {
+    text-decoration: none;
+    color: #fff;
+    padding: 12px 20px;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.navs a:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-3px);
+}
+.message{
+    color: whitesmoke;
+}
+.message h1 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #fff;
+    margin-top: 30px;
+}
+ 
+
+
+/* Search */
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.search input {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    flex: 1;
+    max-width: 1200px;
+    background-color: #fff;
+    color: #333;
+    font-weight: 500;
+    font-size: 16px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s all ease;
+}
+
+.search input:focus {
+    box-shadow: 0 0 25px rgba(63, 93, 232, 0.4);
+}
+
+.search button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    background: linear-gradient(45deg, #3f5de8, #8a5dfc);
+    color: #fff;
+    font-size: 18px;
+    transition: 0.3s all ease;
+}
+
+.search button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(63, 93, 232, 0.4);
+}
+
+/* Products */
+.random_products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    padding: 40px 5%;
+}
+
+.item-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.item-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.item-card img {
+    width: 100%;           /* fills card width */
+    height: 200px;         /* fixed height for uniformity */
+    object-fit: cover;     /* crops if needed, preserves aspect ratio */
+    border-radius: 14px;
+    margin-bottom: 10px;
+}
+
+.item-card h3, .item-card p, .item-card .buy-btn {
+    text-align: left;
+    margin: 5px 0;
+}
+/* Hidden description by default */
+.item-card .prod-desc { /*You are at the bottom and you are not showing*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 96%; /*to cover for the padding between cards*/
+    height: 100%;
+    background: rgba(56, 21, 255, 0.397);
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2%;
+    font-size: 100%;
+    border-radius: inherit; /*take from item-card*/
+    opacity: 0; /*its there but invisible if not hovered over (they dissapear)*/
+    transform: translateY(100%); /*ensures that the description is hidden below each card*/
+    transition: transform 0.3s ease, opacity 0.3s ease; /*ensures that the description cards have the sliding effect. */
+    pointer-events: none; /*  **USED ONLINE SOURCES** BECAUSE AS I SHRUNK THE PAGE, THE HOVER STARTED BLINKING AND FOR SOME CARDS NOT SHOWING. */
+}
+
+/* Show on hover */
+.item-card:hover .prod-desc {
+    opacity: 1; /*Now you can see*/
+    transform: translateY(0); /*ensures that this lands directly above the associated card. */
+}
+
+
+button {
+    display: inline-block;
+    background: linear-gradient(45deg, #3f5de8, #8a5dfc);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #2e4bd1, #6d3fdc);
+}
+
+.item-pic {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+#Sale1{
+    width: 100%;
+    height: 500px;
+}
+.catalog {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(45deg, #6b8ff3, #3f5de8);
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.filter-btn:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(45deg, #3f5de8, #8a5dfc);
+}
+
+/* Footer */
+footer {
+    background: #3f5de8;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    border-radius: 30px 30px 0 0;
+}
+
+footer a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: 0.3s ease;
+}
+
+footer a:hover {
+    color: #00ffff;
+}
+
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+  }
+
+  .logo {
+    position: static;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .navs {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

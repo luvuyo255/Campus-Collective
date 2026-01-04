@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Order Placed | Campus Collective</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <div class="header">
+    <div class="top">
+      <div class="icons">
+        <a href="dashboard.php"><i class="fa fa-user"></i></a>
+        <a href="cart.html"><i class="fa fa-shopping-cart"></i></a>
+      </div>
+    </div>
+    <div class="nav">
+      <div class="logo">
+        <img src="PICTURES/LOGO FINAL.png" alt="logo">
+        <h1 class="message">Campus Collective</h1>
+      </div>
+      <div class="navs">
+        <a href="home.php">Home</a>
+        <a href="buy_maz.php">Shop</a>
+        <a href="sell.php">Sell</a>
+        <a href="reunite.html">Reunite</a>
+        <a href="About.html">About</a>
+        <a href="login.html">Login</a>
+        <a href="home.php">Contact Us</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Order Success Section -->
+  <div class="order-success-container" style="text-align: center; margin: 80px auto;">
+    <i class="fa fa-check-circle" style="font-size: 80px; color: #4CAF50;"></i>
+    <h1>Thank You!</h1>
+    <p>Your order has been successfully placed.</p>
+    <p>We'rve sent a confirmation to your email.</p>
+    <button class="checkout-btn" style="margin-top: 20px;">
+      <a href="home.php" style="color: white; text-decoration: none;">Back to Home</a>
+    </button>
+  </div>
+
+  <!-- Script to clear the cart -->
+  <script>
+    // clear cart after placing order
+    localStorage.removeItem("cart");
+  </script>
+</body>
+</html>

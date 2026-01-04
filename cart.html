@@ -1,0 +1,50 @@
+<!doctype html> 
+<html> 
+<head> 
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+  
+</head>
+<body>
+  <div class="header">
+    <div class="top">
+      <h1 class="message">Campus Collective</h1>
+      <div class="icons">
+        <a href="dashboard.php"><i class="fa fa-user"></i></a>
+        <a href="cart.html"><i class="fa fa-shopping-cart"></i></a>
+      </div>
+    </div>
+    <div class="nav">
+      <div class="logo">
+        <img src="PICTURES/LOGO FINAL.png" alt="logo">
+      </div>
+      <div class="navs">
+        <a href="home.php">Home</a>
+        <a href="buy_maz.php">Shop</a>
+        <a href="sell.php">Sell</a>
+        <a href="reunite.php">Reunite</a>
+        <a href="About.html">About Us</a>
+        <a href="Contact.html">Contact Us</a>
+        <a href="login.php">Login</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="empty-message" id="emptyMessage">
+    <h1>Your Shopping Cart</h1>
+    <p>You have no items in your cart</p>
+    <button><a href="home.php">Continue Shopping</a></button>
+  </div>
+
+  <div class="cart-container" id="cartSection" style="display: none;">
+    <!-- Shop sections will be dynamically inserted here -->
+  </div>
+
+  <script src="YakuzaJS.js"></script>
+
+</body> 
+</html>
